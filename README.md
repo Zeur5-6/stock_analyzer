@@ -1,5 +1,5 @@
 # 📊 Stock Technical Analyzer
-株価チE��ニカル刁E��チE�Eル
+株価テクニカル分析ツール
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
@@ -8,58 +8,79 @@
 
 ## ✨ 特徴
 
-- 📈 **移動平坁E��E* (SMA 10日, 30日, 60日)
-- 📊 **RSI** (Relative Strength Index)  E買われすぎ・売られすぎ判宁E- 📉 **MACD**  Eモメンタム刁E���E�正負色刁E��ヒストグラム付き�E�E- 🎯 **ボリンジャーバンチE*  E価格変動幁E�E可視化
-- 📦 **出来高チャーチE*  E売買量�E推移
-- 🌙 **ダークチE�EチE*  E洗練された�Eロ仕様�EチE��イン
-- 🔄 **褁E��銘柄比輁E*  E正規化価格、RSI、リターン比輁E- 🌐 **Streamlit Web UI**  Eブラウザで操作できるダチE��ュボ�EチE- 📋 **自動レポ�Eト生戁E*  EチE��スト形式�E刁E��レポ�EチE
-## 🚀 クイチE��スターチE
-### インスト�Eル
+- 📈 **移動平均線** (SMA 10日, 30日, 60日)
+- 📊 **RSI** (Relative Strength Index) — 買われすぎ・売られすぎ判定
+- 📉 **MACD** — モメンタム分析（正負色分けヒストグラム付き）
+- 🎯 **ボリンジャーバンド** — 価格変動幅の可視化
+- 📦 **出来高チャート** — 売買量の推移
+- 🌙 **ダークテーマ** — 洗練されたプロ仕様のデザイン
+- 🔄 **複数銘柄比較** — 正規化価格、RSI、リターン比較
+- 🌐 **Streamlit Web UI** — ブラウザで操作できるダッシュボード
+- 📋 **自動レポート生成** — テキスト形式の分析レポート
+
+## 🚀 クイックスタート
+
+### インストール
 ```bash
 git clone https://github.com/Zeur5-6/stock_analyzer.git
 cd stock_analyzer
 pip install -r requirements.txt
 ```
 
-### CLI で使ぁE```bash
-# 単一銘柄刁E��
+### CLI で使う
+```bash
+# 単一銘柄分析
 python stock_analyzer.py AAPL 1mo
 
-# 褁E��銘柄比輁Epython stock_analyzer.py AAPL,TSLA,GOOGL 3mo
+# 複数銘柄比較
+python stock_analyzer.py AAPL,TSLA,GOOGL 3mo
 ```
 
-### Web UI で使ぁE```bash
+### Web UI で使う
+```bash
 streamlit run app.py
 ```
-ブラウザが�E動で開き、インタラクチE��ブなダチE��ュボ�Eドが表示されます、E
+ブラウザが自動で開き、インタラクティブなダッシュボードが表示されます。
+
 ## 📖 パラメータ
 
-| パラメータ | 説昁E| 侁E|
+| パラメータ | 説明 | 例 |
 |---|---|---|
-| **TICKER** | チE��チE��ーシンボル�E�カンマ区刁E��で褁E��可�E�E| `AAPL`, `TSLA,GOOGL` |
-| **PERIOD** | 刁E��期間 | `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `max` |
+| **TICKER** | ティッカーシンボル（カンマ区切りで複数可） | `AAPL`, `TSLA,GOOGL` |
+| **PERIOD** | 分析期間 | `1d`, `5d`, `1mo`, `3mo`, `6mo`, `1y`, `2y`, `5y`, `max` |
 
-## 📂 出劁E
-刁E��結果は `output/` フォルダに自動保存されまぁE
-- `output/[TICKER]_analysis_[日晁E.png`  EチE��ニカル刁E��チャーチE- `output/[TICKER]_report_[日晁E.txt`  E刁E��レポ�EチE- `output/compare_[TICKERS]_[日晁E.png`  E比輁E��ャート（褁E��銘柄時！E
-## 📊 チE��ニカル持E���E解説
+## 📂 出力
 
-| 持E��E| 説昁E|
+分析結果は `output/` フォルダに自動保存されます:
+- `output/[TICKER]_analysis_[日時].png` — テクニカル分析チャート
+- `output/[TICKER]_report_[日時].txt` — 分析レポート
+- `output/compare_[TICKERS]_[日時].png` — 比較チャート（複数銘柄時）
+
+## 📊 テクニカル指標の解説
+
+| 指標 | 説明 |
 |---|---|
-| **SMA** | 短朁E10日)が長朁E30日)の丁EↁE上�EトレンチE|
-| **RSI** | 70趁E= 買われすぎ / 30未満 = 売られすぎ |
-| **MACD** | MACDがシグナル線を上抜ぁEↁE買ぁE��グナル |
-| **ボリンジャーバンチE* | バンド外に価格が�Eると反発の可能性 |
+| **SMA** | 短期(10日)が長期(30日)の上 → 上昇トレンド |
+| **RSI** | 70超 = 買われすぎ / 30未満 = 売られすぎ |
+| **MACD** | MACDがシグナル線を上抜け → 買いシグナル |
+| **ボリンジャーバンド** | バンド外に価格が出ると反発の可能性 |
 
-## 🛠�E�E技術情報
+## 🛠️ 技術情報
 
 - Python 3.11+
-- yfinance  EYahoo Finance APIラチE��ー
-- pandas  EチE�Eタ処琁E- matplotlib  Eチャート可視化
-- numpy  E数値計箁E- streamlit  EWeb UIフレームワーク
-- mplfinance  E金融チャート（オプション�E�E
-## ⚠�E�E免責事頁E
-こ�EチE�Eルは**教育目皁E*であり、投賁E��言ではありません、E実際の投賁E��定�E自己責任で行ってください、E過去のパフォーマンスが封E��の結果を保証するも�Eではありません、E
+- yfinance — Yahoo Finance APIラッパー
+- pandas — データ処理
+- matplotlib — チャート可視化
+- numpy — 数値計算
+- streamlit — Web UIフレームワーク
+- mplfinance — 金融チャート（オプション）
+
+## ⚠️ 免責事項
+
+このツールは**教育目的**であり、投資助言ではありません。
+実際の投資決定は自己責任で行ってください。
+過去のパフォーマンスが将来の結果を保証するものではありません。
+
 ## 📄 ライセンス
 
-MIT License  E[LICENSE](LICENSE) を参照
+MIT License — [LICENSE](LICENSE) を参照
