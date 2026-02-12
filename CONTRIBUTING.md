@@ -1,14 +1,14 @@
 # Contributing
 
-## バグ報告・機能リクエスト
+## バグ報告�E機�EリクエスチE
 
-[Issues](../../issues) から報告をお願いします。
+[Issues](../../issues) から報告をお願いします、E
 
-## 開発環境
+## 開発環墁E
 
 ```bash
-git clone https://github.com/Zeur5-6/stock-analyzer.git
-cd stock-analyzer
+git clone https://github.com/Zeur5-6/stock_analyzer.git
+cd stock_analyzer
 python -m venv venv
 venv\Scripts\activate    # Windows
 pip install -r requirements.txt
@@ -17,15 +17,15 @@ pip install -r requirements.txt
 ## コードスタイル
 
 - PEP 8 準拠
-- 関数・クラスに docstring を記載
-- 変数名は分かりやすいものを使用
+- 関数・クラスに docstring を記輁E
+- 変数名�E刁E��りやすいも�Eを使用
 
 ## Pull Request
 
-1. Fork → ブランチ作成 (`git checkout -b feature/xxx`)
-2. コミット (`git commit -m "Add xxx"`)
-3. Push → PR 作成
+1. Fork ↁEブランチ作�E (`git checkout -b feature/xxx`)
+2. コミッチE(`git commit -m "Add xxx"`)
+3. Push ↁEPR 作�E
 
 ## ライセンス
 
-MIT License の元で貢献していただきます。
+MIT License の允E��貢献してぁE��だきます、E
